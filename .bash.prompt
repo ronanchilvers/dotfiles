@@ -6,7 +6,7 @@
 
 # 'Safe' version of __git_ps1 to avoid errors on systems that don't have it
 function __my_git_ps1 {
-  command -v __git_ps1 > /dev/null && __git_ps1 " (%s)"
+  command -v __git_ps1 > /dev/null && __git_ps1 "(%s) "
 }
 
 # Colours have names too. Stolen from Arch wiki
@@ -53,6 +53,6 @@ gitC="${bldylw}"
 pointerC="${txtgrn}"
 normalC="${txtwht}"
 
-# Prompt
+# Prompt definition
 # export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\W${gitC}\$(__my_git_ps1)${pointerC}\$${normalC} "
-export PS1=" ${pathC}\W${gitC}\$(__my_git_ps1)${pointerC}\$${normalC} "
+export PS1=" ${pathC}\W${gitC} \$(__my_git_ps1)${pointerC}\$${normalC} "
