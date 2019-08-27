@@ -4,8 +4,27 @@
 #   - https://github.com/victoriadrake/dotfiles/
 # -*- mode: bash -*-
 
+# Related functions
+function do_jump() {
+    if [ ! -e ~/.jump-servers ]; then
+        echo "**********"
+        echo "Jump server list not found at ~/.jump-servers"
+        echo "**********"
+        exit 1
+    fi
+    servers=($(cat ~/.jump-servers))
+    size=${#servers[@]}
+    index=$(($RANDOM % $size))
+    server=${servers[index]}
+    echo "*********************"
+    echo "JUMPING TO $server"
+    echo "*********************"
+    echo
+    ssh $server
+}
+
 # General
-alias refresh="source ~/configs/bash/bash.aliases"
+alias refresh="source ~/dotfiles/.bashrc"
 alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
 alias home="cd ~/ && clear"
 alias :q="exit"
@@ -22,3 +41,7 @@ alias vup="vagrant up"
 alias vssh="vagrant ssh"
 alias vst="vagrant status"
 alias vhalt="vagrant halt"
+alias vreup="vagrant reload"
+
+# Network
+alias jump="do_jump"
