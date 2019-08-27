@@ -1,0 +1,43 @@
+[user]
+    name = Ronan Chilvers
+    email = ronan@thelittledot.com
+    signingkey = 82B13555
+[core]
+    excludesfile = /Users/ronan/.gitignore_global
+    fileMode = false
+[color]
+    ui = auto
+[push]
+    default = simple
+[alias]
+    br = branch
+    ci = commit
+    co = checkout
+    graph = log --oneline --graph --decorate
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    logp = log -p
+    r = remote
+    st = status
+    unstage = reset HEAD
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+[commit]
+    #gpgsign = true
+    #template = /Users/ronan/.stCommitMsg
+[gpg]
+    program = /usr/local/bin/gpg
+[status]
+    submodulesummary = 1
+[github]
+    user = ronanchilvers
+[gui]
+    recentrepo = /home/ronan/Projects/deploy
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
+[url "ssh://git@bitbucket.org/"]
+  insteadOf = https://bitbucket.org/

@@ -1,0 +1,22 @@
+# bash aliases
+# Sources:
+#   - https://github.com/tomnomnom/dotfile
+#   - https://github.com/victoriadrake/dotfiles/
+# -*- mode: bash -*-
+
+# General
+alias refresh="source ~/configs/bash/bash.aliases"
+alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
+alias home="cd ~/ && clear"
+
+# Git
+alias st="git status"
+
+# Composer
+alias serve="clear && composer serve"
+
+# Vagrant
+alias v="vagrant"
+alias vup="cd ~/vagrant/d3r && vagrant up"
+alias vssh="ssh -A vagrant@192.168.10.10"
+alias :q="exit"
