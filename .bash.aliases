@@ -31,6 +31,14 @@ alias :q="exit"
 
 # Git
 alias st="git status"
+alias stash="git stash"
+alias pop="git stash pop"
+alias co="git checkout"
+alias pull="git pull"
+alias push="git push"
+alias fetch="git fetch"
+alias add="git add"
+alias unstage="git reset HEAD"
 
 # Composer
 alias serve="clear && composer serve"
