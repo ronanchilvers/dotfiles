@@ -9,9 +9,6 @@ export PATH=/usr/local/opt/bison@3.3/bin:$PATH
 export TZ="Europe/London"
 export PHPDOC_AUTHOR="Ronan Chilvers <ronan@d3r.com>"
 
-# Aliases
-. ~/dotfiles/.bash.aliases
-
 # Configure gpg agent
 if [ ! -S ~/.gnupg/S.gpg-agent ]; then
     eval $( gpg-agent --daemon --default-cache-ttl 1800 )
@@ -19,6 +16,9 @@ fi
 
 # Configure phpenv shims
 eval "$(phpenv init -)"
+
+# Aliases
+source ~/dotfiles/.bash.aliases
 
 # Prompt
 source ~/dotfiles/.git-prompt.sh
