@@ -3,7 +3,7 @@
 # Symlink configuration files / directories into place
 # @see https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
 #
-dotfilesDir=$(pwd)
+dotfilesDir="~/dotfiles"
 
 function linkDotfile {
   dest="${HOME}/${1}"
@@ -30,5 +30,6 @@ function linkDotfile {
 }
 
 linkDotfile .bashrc
-linkDotfile .gitignore
-linkDotfile .gitconfig
+linkDotfile .profile
+# linkDotfile .gitignore
+# linkDotfile .gitconfig
