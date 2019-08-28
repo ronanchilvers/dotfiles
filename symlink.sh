@@ -3,7 +3,7 @@
 # Symlink configuration files / directories into place
 # @see https://github.com/tomnomnom/dotfiles/blob/master/setup.sh
 #
-dotfilesDir="~/dotfiles"
+dotfilesDir="${HOME}/dotfiles"
 
 function linkDotfile {
   dest="${HOME}/${1}"
