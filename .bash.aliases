@@ -1,10 +1,25 @@
 # bash aliases
 # Sources:
-#   - https://github.com/tomnomnom/dotfile
-#   - https://github.com/victoriadrake/dotfiles/
+#   - https://github.com/tomnomnom/dotfiles
+#   - https://github.com/victoriadrake/dotfiles
 # -*- mode: bash -*-
 
 # Related functions
+
+function vagrant_status() {
+    echo "Current machine states:"
+    echo
+    printf "%-30s%-15s\n" "VM" "State"
+    for vmdir in .vagrant/machines/*; do
+        vmname=`basename $vmdir`
+        [ -f $vmdir/virtualbox/id ] && id=`cat $vmdir/virtualbox/id` || continue
+        state=$(VBoxManage showvminfo --machinereadable $id | grep ^VMState= | cut -f2 -d '"')
+        printf "%-30s%-30s\n" $vmname $state
+    done
+    echo
+}
+
+# Start a jump server session
 function do_jump() {
     if [ ! -e ~/.jump-servers ]; then
         echo "**********"
@@ -23,6 +38,27 @@ function do_jump() {
     ssh $server
 }
 
+# Open a github PR
+function pr() {
+  github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%' | awk '/github/'`
+  branch_name=`git symbolic-ref HEAD | cut -d"/" -f 3,4`
+  pr_url=$github_url"/compare/master..."$branch_name
+  open $pr_url
+}
+
+# Jump up a given number of directories
+function cu {
+    local count=$1
+    if [ -z "${count}" ]; then
+        count=1
+    fi
+    local path=""
+    for i in $(seq 1 ${count}); do
+        path="${path}../"
+    done
+    cd $path
+}
+
 # General
 alias refresh="source ~/dotfiles/.bashrc"
 alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
@@ -30,26 +66,28 @@ alias home="cd ~/ && clear"
 alias :q="exit"
 
 # Git
-alias st="git status"
-alias stash="git stash"
-alias pop="git stash pop"
+alias add="git add"
+alias ci="git commit"
 alias co="git checkout"
+alias fetch="git fetch"
+alias pop="git stash pop"
 alias pull="git pull"
 alias push="git push"
-alias fetch="git fetch"
-alias add="git add"
-alias unstage="git reset HEAD"
+alias st="git status"
+alias stash="git stash"
+alias unstage="git rm --cached"
 
 # Composer
 alias serve="clear && composer serve"
 
 # Vagrant
 alias v="vagrant"
-alias vup="vagrant up"
-alias vssh="vagrant ssh"
-alias vst="vagrant status"
 alias vhalt="vagrant halt"
 alias vreup="vagrant reload"
+alias vssh="vagrant ssh"
+# alias vst="vagrant status"
+alias vst="vagrant_status"
+alias vup="vagrant up"
 
 # Network
 alias jump="do_jump"
