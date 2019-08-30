@@ -1,8 +1,7 @@
 # bash aliases
+# -*- mode: bash -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfile
-#   - https://github.com/victoriadrake/dotfiles/
-# -*- mode: bash -*-
 
 # 'Safe' version of __git_ps1 to avoid errors on systems that don't have it
 function __my_git_ps1 {

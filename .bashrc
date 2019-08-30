@@ -18,8 +18,9 @@ fi
 eval "$(phpenv init -)"
 
 # Aliases
-source ~/dotfiles/.bash.aliases
+source ~/dotfiles/bash/functions.sh
+source ~/dotfiles/bash/aliases.sh
 
 # Prompt
-source ~/dotfiles/.git-prompt.sh
-source ~/dotfiles/.bash.prompt
+source ~/dotfiles/bash/git-prompt.sh
+source ~/dotfiles/bash/prompt.sh
