@@ -6,7 +6,7 @@
 
 # General
 alias refresh="source ~/dotfiles/.bashrc"
-alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
+#alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
 alias home="cd ~/ && clear"
 alias :q="exit"
 

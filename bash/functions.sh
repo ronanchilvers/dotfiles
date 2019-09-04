@@ -5,6 +5,18 @@
 #   - https://tighten.co/blog/open-github-pull-request-from-terminal
 #   - https://github.com/hashicorp/vagrant/issues/1011
 
+function ip_info() {
+    ip=$(curl -s curlmyip.net)
+    echo -n "IP : $ip"
+    which pbcopy >/dev/null
+    if [ $? -eq 0 ]; then
+        echo $ip | pbcopy
+        echo " (copied)"
+    else
+        echo
+    fi
+}
+
 function vagrant_status() {
     echo "Current machine states:"
     echo
