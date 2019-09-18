@@ -5,21 +5,25 @@
 #   - https://github.com/victoriadrake/dotfiles
 
 # General
-alias refresh="source ~/dotfiles/.bashrc"
+alias refresh="source ~/dotfiles/.bashrc && clear"
 #alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
 alias home="cd ~/ && clear"
 alias :q="exit"
 
 # Git
 alias add="git add"
+alias br="git branch"
 alias ci="git commit"
 alias co="git checkout"
+alias dif="git diff"
 alias fetch="git fetch"
+alias gui="git gui"
 alias merge="git merge"
 alias pop="git stash pop"
 alias pull="git pull"
 alias push="git push"
-alias st="git status"
+alias rem="git remote"
+alias st="git status -sb"
 alias stash="git stash"
 alias unstage="git rm --cached"
 
