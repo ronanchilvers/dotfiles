@@ -31,5 +31,5 @@ function linkDotfile {
 
 linkDotfile .bashrc
 linkDotfile .profile
-# linkDotfile .gitignore
-# linkDotfile .gitconfig
+linkDotfile .gitignore
+linkDotfile .gitconfig

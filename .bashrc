@@ -18,7 +18,7 @@ export GIT_PS1_SHOWCOLORHINTS="yes"
 
 # Configure gpg agent
 if [ ! -S ~/.gnupg/S.gpg-agent ]; then
-    eval $( gpg-agent --daemon --default-cache-ttl 1800 )
+    eval $( gpg-agent --daemon --default-cache-ttl 1800 >/dev/null 2>&1)
 fi
 
 # Configure phpenv shims
