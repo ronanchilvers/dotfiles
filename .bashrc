@@ -22,7 +22,9 @@ if [ ! -S ~/.gnupg/S.gpg-agent ]; then
 fi
 
 # Configure phpenv shims
-eval "$(phpenv init -)"
+if hash phpenv 2>/dev/null; then
+    eval "$(phpenv init -)"
+fi
 
 # Aliases
 source ~/dotfiles/bash/functions.sh
