@@ -55,4 +55,4 @@ normalC="${txtwht}"
 # Prompt definition
 # export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\W${gitC}\$(__my_git_ps1)${pointerC}\$${normalC} "
 #export PS1="${pathC}\W${gitC} \$(__my_git_ps1)${pointerC}\$${normalC} "
-export PROMPT_COMMAND='__git_ps1 "${pathC}\W${txtrst}" "${pointerC} \$${normalC} "'
+export PROMPT_COMMAND='__git_ps1 "${hostC}\h ${pathC}\W${txtrst}" "${pointerC} \$${normalC} "'
