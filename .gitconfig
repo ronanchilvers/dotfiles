@@ -3,7 +3,7 @@
     email = ronan@thelittledot.com
     signingkey = 82B13555
 [core]
-    excludesfile = /Users/ronan/.gitignore_global
+    excludesfile = /Users/ronan/.gitignore
     fileMode = false
 [color]
     ui = auto
@@ -25,7 +25,7 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
 [commit]
-    #gpgsign = true
+    gpgsign = true
     #template = /Users/ronan/.stCommitMsg
 [gpg]
     program = /usr/local/bin/gpg
