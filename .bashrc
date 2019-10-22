@@ -10,7 +10,7 @@ export TZ="Europe/London"
 export PHPDOC_AUTHOR="Ronan Chilvers <ronan@d3r.com>"
 
 # Git prompt variables
-export GIT_PS1_SHOWUPSTREAM="verbose name"
+export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWDIRTYSTATE="yes"
 export GIT_PS1_SHOWUNTRACKEDFILES="yes"
 export GIT_PS1_SHOWCOLORHINTS="yes"
