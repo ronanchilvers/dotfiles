@@ -33,3 +33,4 @@ linkDotfile .bashrc
 linkDotfile .profile
 linkDotfile .gitignore
 linkDotfile .gitconfig
+linkDotfile .gnupg/gpg-agent.conf
