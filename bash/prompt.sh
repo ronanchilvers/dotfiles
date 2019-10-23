@@ -35,7 +35,7 @@ undcyn='\[\e[4;36m\]' # Cyan
 undwht='\[\e[4;37m\]' # White
 bakblk='\[\e[40m\]'   # Black - Background
 bakred='\[\e[41m\]'   # Red
-badgrn='\[\e[42m\]'   # Green
+bakgrn='\[\e[42m\]'   # Green
 bakylw='\[\e[43m\]'   # Yellow
 bakblu='\[\e[44m\]'   # Blue
 bakpur='\[\e[45m\]'   # Purple
@@ -44,13 +44,13 @@ bakwht='\[\e[47m\]'   # White
 txtrst='\[\e[0m\]'    # Text Reset
 
 # Prompt colours
-atC="${txtwht}"
-nameC="${bldgrn}"
-hostC="${bldgrn}"
-pathC="${bldblu}"
-gitC="${bldylw}"
-pointerC="${txtgrn}"
-normalC="${txtwht}"
+# atC="${txtwht}"
+# nameC="${txtgrn}"
+hostC="${bldblu}"
+pathC="${txtgrn}"
+# gitC="${bldylw}"
+pointerC="${txtblk}"
+normalC="${txtrst}"
 
 # Prompt definition
 # export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\W${gitC}\$(__my_git_ps1)${pointerC}\$${normalC} "
