@@ -27,7 +27,7 @@ alias push="git push"
 alias rem="git remote"
 alias st="git status -sb"
 alias stash="git stash"
-alias unstage="git rm --cached"
+alias unstage="git reset HEAD"
 
 # Composer
 alias c="composer"
