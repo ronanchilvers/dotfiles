@@ -17,6 +17,7 @@ alias br="git branch"
 alias ci="git commit"
 alias co="git checkout"
 alias dif="git diff"
+alias cached="git diff --cached"
 alias fetch="git fetch"
 alias gui="git gui"
 alias log="git log"
@@ -28,6 +29,11 @@ alias rem="git remote"
 alias st="git status -sb"
 alias stash="git stash"
 alias unstage="git reset HEAD"
+
+# Hub commands
+alias pr="hub pull-request -c -o -d"
+alias prs="hub pr list"
+alias pro="hub pr show"
 
 # Composer
 alias c="composer"
