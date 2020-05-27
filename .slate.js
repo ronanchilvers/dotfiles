@@ -87,17 +87,17 @@ var positionMap = {
     "down:ctrl,cmd":    "bottom-half",
     "left:ctrl,cmd":    "left-half",
     "right:ctrl,cmd":   "right-half",
-    "left:ctrl,shift,cmd":    "left-quarter",
-    "right:ctrl,shift,cmd":   "right-quarter",
+    // "left:ctrl,shift,cmd":    "left-quarter",
+    // "right:ctrl,shift,cmd":   "right-quarter",
 
     "m:ctrl,cmd":       "fullscreen",
     // "m:f3":       "fullscreen",
     "c:ctrl,cmd":       "centre-top",
 
-    // "1:c,ctrl,alt":     "bottom-right",
-    // "2:c,ctrl,alt":     "bottom-left",
-    // "3:c,ctrl,alt":     "top-left",
-    // "4:c,ctrl,alt":     "top-right",
+    "left:shift,ctrl,cmd":     "bottom-left",
+    "down:shift,ctrl,cmd":     "bottom-right",
+    "up:shift,ctrl,cmd":     "top-left",
+    "right:shift,ctrl,cmd":     "top-right",
 }
 
 // NB : Application paths must be wrapped in quotes if there are spaces in it
@@ -117,10 +117,10 @@ var appMap = {
         "cmd": "/usr/bin/open '/Applications/Sublime Text.app'"
     },
 
-    "Twitter": {
-        "keys": "t:ctrl,alt",
-        "cmd": "/usr/bin/open '/Applications/Night Owl.app'"
-    },
+    // "Twitter": {
+    //     "keys": "t:ctrl,alt",
+    //     "cmd": "/usr/bin/open '/Applications/Night Owl.app'"
+    // },
 
     "Sequel Pro": {
         "keys": "d:ctrl,alt",

@@ -31,7 +31,7 @@ alias stash="git stash"
 alias unstage="git reset HEAD"
 
 # Hub commands
-alias pr="hub pull-request -c -o -d"
+alias pr="hub pull-request -c -o"
 alias prs="hub pr list"
 alias pro="hub pr show"
 
