@@ -49,7 +49,7 @@ txtrst='\[\e[0m\]'    # Text Reset
 hostC="${bldblu}"
 pathC="${txtgrn}"
 # gitC="${bldylw}"
-pointerC="${txtblk}"
+pointerC="${txtwht}"
 normalC="${txtrst}"
 
 # Prompt definition
