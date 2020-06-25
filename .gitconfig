@@ -1,9 +1,9 @@
 [user]
-    name = Ronan Chilvers
-    email = ronan@thelittledot.com
+	name = Ronan Chilvers
+	email = ronan@d3r.com
     signingkey = 82B13555
 [core]
-    excludesfile = /Users/ronan/.gitignore
+	excludesfile = ~/.gitignore_global
     fileMode = false
 [color]
     ui = auto
@@ -25,19 +25,23 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
 [commit]
-    #gpgsign = true
-    #template = /Users/ronan/.stCommitMsg
+    template = ~/.stCommitMsg
+    gpgsign = true
 [gpg]
     program = /usr/local/bin/gpg
 [status]
     submodulesummary = 1
 [github]
     user = ronanchilvers
-[gui]
-    recentrepo = /home/ronan/Projects/deploy
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [url "ssh://git@gitlab.com/"]
   insteadOf = https://gitlab.com/
 [url "ssh://git@bitbucket.org/"]
   insteadOf = https://bitbucket.org/
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
