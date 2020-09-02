@@ -5,6 +5,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.phpenv/bin:$PATH
 export PATH=/usr/local/opt/bison@3.3/bin:$PATH
+export PATH=$PATH:/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/bin
 
 # Environment variables
 export TZ="Europe/London"
