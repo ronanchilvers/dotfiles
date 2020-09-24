@@ -1,5 +1,5 @@
-# bash aliases
-# -*- mode: bash -*-
+# zsh aliases
+# -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfile
 
