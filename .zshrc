@@ -32,9 +32,9 @@ if hash phpenv 2>/dev/null; then
 fi
 
 # Aliases
-source ~/dotfiles/bash/functions.sh
-source ~/dotfiles/bash/aliases.sh
+source ~/dotfiles/shell/functions.sh
+source ~/dotfiles/shell/aliases.sh
 
 # Prompt
-source ~/dotfiles/bash/git-prompt.sh
-source ~/dotfiles/bash/prompt.sh
+source ~/dotfiles/shell/git-prompt.sh
+source ~/dotfiles/shell/prompt.sh
