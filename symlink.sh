@@ -29,7 +29,7 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-linkDotfile .bashrc
+linkDotfile .zshrc
 linkDotfile .profile
 linkDotfile .gitignore
 linkDotfile .gitconfig

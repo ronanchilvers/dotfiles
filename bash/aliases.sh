@@ -1,11 +1,11 @@
-# bash aliases
-# -*- mode: bash -*-
+# zsh aliases
+# -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfiles
 #   - https://github.com/victoriadrake/dotfiles
 
 # General
-alias refresh="source ~/dotfiles/.bashrc && clear"
+alias refresh="source ~/dotfiles/.zshrc && clear"
 #alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
 alias home="cd ~/ && clear"
 alias :q="exit"

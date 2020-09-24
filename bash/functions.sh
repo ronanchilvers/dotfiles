@@ -1,5 +1,5 @@
-# bash aliases
-# -*- mode: bash -*-
+# zsh aliases
+# -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfiles
 #   - https://tighten.co/blog/open-github-pull-request-from-terminal
