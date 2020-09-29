@@ -17,7 +17,6 @@ export GIT_PS1_SHOWDIRTYSTATE="yes"
 export GIT_PS1_SHOWUNTRACKEDFILES="yes"
 export GIT_PS1_SHOWCOLORHINTS="yes"
 
-
 # Configure gpg agent
 if [ ! -S ~/.gnupg/S.gpg-agent ]; then
     eval $( gpg-agent --daemon --default-cache-ttl 1800 >/dev/null 2>&1)
