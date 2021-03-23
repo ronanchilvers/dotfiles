@@ -2,6 +2,7 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.tfenv/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.phpenv/bin:$PATH
 export PATH=/usr/local/opt/bison@3.3/bin:$PATH
@@ -37,3 +38,6 @@ source ~/dotfiles/shell/aliases.sh
 # Prompt
 source ~/dotfiles/shell/git-prompt.sh
 source ~/dotfiles/shell/prompt.sh
+
+# DirEnv
+eval "$(direnv hook zsh)"

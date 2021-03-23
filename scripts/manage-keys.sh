@@ -30,6 +30,10 @@ function err {
     echo "! $1" >&2
 }
 
+function write_config {
+
+}
+
 function create_key {
     name=$1
     filename=$HOME/.ssh/id_${name}
