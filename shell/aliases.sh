@@ -1,11 +1,11 @@
-# bash aliases
-# -*- mode: bash -*-
+# zsh aliases
+# -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfiles
 #   - https://github.com/victoriadrake/dotfiles
 
 # General
-alias refresh="source ~/dotfiles/.bashrc && clear"
+alias refresh="source ~/dotfiles/.zshrc && clear"
 #alias myip="ip=$(curl -s curlmyip.net) ; echo \"IP : $ip\" ; echo $ip | pbcopy"
 alias home="cd ~/ && clear"
 alias :q="exit"
@@ -18,12 +18,12 @@ alias ci="git commit"
 alias co="git checkout"
 alias changes="git diff"
 alias cached="git diff --cached"
-alias fetch="git fetch"
+alias fetch="git fetch --prune"
 alias gui="git gui"
 alias log="git log"
 alias merge="git merge"
 alias pop="git stash pop"
-alias pull="git pull"
+alias pull="git pull --prune"
 alias push="git push"
 alias rem="git remote"
 alias st="git status -sb"

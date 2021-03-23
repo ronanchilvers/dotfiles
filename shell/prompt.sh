@@ -1,5 +1,5 @@
-# bash aliases
-# -*- mode: bash -*-
+# zsh aliases
+# -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfile
 
@@ -56,3 +56,8 @@ normalC="${txtrst}"
 # export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\W${gitC}\$(__my_git_ps1)${pointerC}\$${normalC} "
 #export PS1="${pathC}\W${gitC} \$(__my_git_ps1)${pointerC}\$${normalC} "
 export PROMPT_COMMAND='__git_ps1 "${hostC}\h ${pathC}\W${txtrst}" "${pointerC} \$${normalC} "'
+
+# zsh support
+precmd() {
+    __git_ps1 "%B%F{blue}%m %F{green}%2~%f%b" "%F{white} \$%f "
+}

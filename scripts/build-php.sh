@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 ver=$1
 

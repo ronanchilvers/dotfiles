@@ -2,6 +2,7 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.tfenv/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.phpenv/bin:$PATH
 export PATH=/usr/local/opt/bison@3.3/bin:$PATH
@@ -17,7 +18,6 @@ export GIT_PS1_SHOWDIRTYSTATE="yes"
 export GIT_PS1_SHOWUNTRACKEDFILES="yes"
 export GIT_PS1_SHOWCOLORHINTS="yes"
 
-
 # Configure gpg agent
 if [ ! -S ~/.gnupg/S.gpg-agent ]; then
     eval $( gpg-agent --daemon --default-cache-ttl 1800 >/dev/null 2>&1)
@@ -32,9 +32,12 @@ if hash phpenv 2>/dev/null; then
 fi
 
 # Aliases
-source ~/dotfiles/bash/functions.sh
-source ~/dotfiles/bash/aliases.sh
+source ~/dotfiles/shell/functions.sh
+source ~/dotfiles/shell/aliases.sh
 
 # Prompt
-source ~/dotfiles/bash/git-prompt.sh
-source ~/dotfiles/bash/prompt.sh
+source ~/dotfiles/shell/git-prompt.sh
+source ~/dotfiles/shell/prompt.sh
+
+# DirEnv
+eval "$(direnv hook zsh)"

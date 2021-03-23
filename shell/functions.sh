@@ -1,5 +1,5 @@
-# bash aliases
-# -*- mode: bash -*-
+# zsh aliases
+# -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfiles
 #   - https://tighten.co/blog/open-github-pull-request-from-terminal
@@ -29,33 +29,6 @@ function vagrant_status() {
     done
     echo
 }
-
-# Start a jump server session
-function do_jump() {
-    if [ ! -e ~/.jump-servers ]; then
-        echo "**********"
-        echo "Jump server list not found at ~/.jump-servers"
-        echo "**********"
-        exit 1
-    fi
-    servers=($(cat ~/.jump-servers))
-    size=${#servers[@]}
-    index=$(($RANDOM % $size))
-    server=${servers[index]}
-    echo "*********************"
-    echo "JUMPING TO $server"
-    echo "*********************"
-    echo
-    ssh $server
-}
-
-# Open a github PR
-# function pr() {
-#   github_url=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%' | awk '/github/'`
-#   branch_name=`git symbolic-ref HEAD | cut -d"/" -f 3,4`
-#   pr_url=$github_url"/compare/master..."$branch_name
-#   open $pr_url
-# }
 
 # Jump up a given number of directories
 function cu {
