@@ -38,6 +38,3 @@ source ~/dotfiles/shell/aliases.sh
 # Prompt
 source ~/dotfiles/shell/git-prompt.sh
 source ~/dotfiles/shell/prompt.sh
-
-# DirEnv
-eval "$(direnv hook zsh)"

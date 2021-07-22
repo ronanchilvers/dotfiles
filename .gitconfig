@@ -4,7 +4,7 @@
     signingkey = 82B13555
 [core]
 	excludesfile = ~/.gitignore_global
-    fileMode = false
+	fileMode = false
 [color]
     ui = auto
 [push]
@@ -25,7 +25,7 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
 [commit]
-    template = ~/.stCommitMsg
+	template = ~/.stCommitMsg
     gpgsign = true
 [gpg]
     program = /usr/local/bin/gpg
@@ -41,7 +41,7 @@
   insteadOf = https://bitbucket.org/
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -50,3 +50,5 @@
 	trustExitCode = true
 [merge]
 	tool = smerge
+[init]
+	defaultBranch = master

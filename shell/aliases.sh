@@ -2,7 +2,7 @@
 # -*- mode: zsh -*-
 # Sources:
 #   - https://github.com/tomnomnom/dotfiles
-#   - https://github.com/victoriadrake/dotfiles
+#   - https://github.com/victoriadrake/dotfiles
 
 # General
 alias refresh="source ~/dotfiles/.zshrc && clear"
@@ -43,6 +43,7 @@ alias serve="clear && composer serve"
 alias v="vagrant"
 alias vhalt="vagrant halt"
 alias vreup="vagrant reload"
+alias vre="vagrant reload"
 alias vssh="vagrant ssh"
 # alias vst="vagrant status"
 alias vst="vagrant_status"
